@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Сорочка з жилетом">
+  <defs>
+    <linearGradient id="v" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cdb488" /><stop offset=".55" stop-color="#b49a6c" /><stop offset="1" stop-color="#96805a" />
+    </linearGradient>
+  </defs>
+  <path d="M85 50 C83 26 91 17 100 17 C109 17 117 26 115 50 C112 39 108 33 100 33 C92 33 88 39 85 50 Z" fill="#4a3a26" />
+  <ellipse cx="100" cy="48" rx="15" ry="18" fill="#e6c09a" />
+  <path d="M93 64 L93 82 Q100 88 107 82 L107 64 Z" fill="#e6c09a" />
+  <path d="M93 79 Q100 85 107 79 L107 83 Q100 89 93 83 Z" fill="#cc9f76" />
+  <!-- вуса й еспаньйолка -->
+  <path d="M92 56 C96 59 104 59 108 56 C105 60 95 60 92 56 Z" fill="#4a3a26" />
+  <path d="M94 62 C94 70 106 70 106 62 C104 67 96 67 94 62 Z" fill="#4a3a26" />
+  <!-- рукави сорочки (білі) -->
+  <path d="M70 100 C60 140 60 184 68 220 C71 227 79 225 77 218 C70 184 73 142 82 114 Z" fill="#fdfaf3" stroke="#d8cdb8" stroke-width="1.1" />
+  <path d="M130 100 C140 140 140 184 132 220 C129 227 121 225 123 218 C130 184 127 142 118 114 Z" fill="#fdfaf3" stroke="#d8cdb8" stroke-width="1.1" />
+  <!-- штани -->
+  <path d="M80 246 L99 240 L97 406 L83 406 Z" fill="#4a3728" />
+  <path d="M120 246 L101 240 L103 406 L117 406 Z" fill="#3d2e20" />
+  <!-- сорочка (біла, на всю ширину) -->
+  <path d="M76 98 C80 94 88 91 100 91 C112 91 120 94 124 98 L121 248 L100 242 L79 248 Z" fill="#fdfaf3" stroke="#d8cdb8" stroke-width="1.1" />
+  <path d="M100 92 L100 240" stroke="#e7e0d2" stroke-width="1" opacity=".7" />
+  <!-- комір -->
+  <path d="M100 96 L90 107 L100 122 L110 107 Z" fill="#ffffff" stroke="#d8cdb8" stroke-width="1.1" />
+  <!-- краватка -->
+  <path d="M95 105 L105 105 L107 112 L93 112 Z" fill="#6d784c" />
+  <path d="M93 112 L107 112 L104 150 L100 158 L96 150 Z" fill="#7d885f" />
+  <!-- жилет (вужчий, темніший) -->
+  <path d="M85 108 L84 240 L100 234 L116 240 L115 108 C110 103 105 104 100 114 C95 104 90 103 85 108 Z" fill="url(#v)" />
+  <!-- виріз жилета (видно сорочку й краватку) -->
+  <path d="M100 116 L92 110 L98 168 L100 174 L102 168 L108 110 Z" fill="#fdfaf3" stroke="#d8cdb8" stroke-width="1.1" />
+  <path d="M95 112 L105 112 L107 118 L93 118 Z" fill="#6d784c" />
+  <path d="M93 118 L107 118 L104 160 L100 168 L96 160 Z" fill="#7d885f" />
+  <!-- ґудзики жилета -->
+  <circle cx="100" cy="186" r="2.2" fill="#6f5c3c" /><circle cx="100" cy="204" r="2.2" fill="#6f5c3c" /><circle cx="100" cy="222" r="2.2" fill="#6f5c3c" />
+  <!-- туфлі -->
+  <path d="M82 406 L98 406 L100 415 L78 417 Z" fill="#2a2012" />
+  <path d="M118 406 L102 406 L100 415 L122 417 Z" fill="#2a2012" />
+</svg>

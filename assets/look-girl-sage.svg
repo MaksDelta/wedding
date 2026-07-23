@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Дитяча сукня">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa47c" /><stop offset=".5" stop-color="#7d885f" /><stop offset="1" stop-color="#5c6842" />
+    </linearGradient>
+  </defs>
+  <!-- волосся -->
+  <path d="M74 118 C72 84 86 70 100 70 C114 70 128 84 126 118 C126 130 120 136 116 134 C118 120 112 110 100 110 C88 110 82 120 84 134 C80 136 74 130 74 118 Z" fill="#6a5137" />
+  <!-- бантик -->
+  <path d="M100 76 L84 66 L84 84 Z" fill="#e8a7cf" /><path d="M100 76 L116 66 L116 84 Z" fill="#e8a7cf" />
+  <circle cx="100" cy="76" r="4.5" fill="#cf82b2" />
+  <!-- голова -->
+  <ellipse cx="100" cy="122" rx="23" ry="25" fill="#e7c3a0" />
+  <!-- шия -->
+  <path d="M94 144 L94 156 Q100 161 106 156 L106 144 Z" fill="#e7c3a0" />
+  <!-- руки -->
+  <path d="M80 164 C68 182 66 206 73 227 C75 233 81 232 80 226 C77 207 80 186 89 172 Z" fill="#e7c3a0" />
+  <path d="M120 164 C132 182 134 206 127 227 C125 233 119 232 120 226 C123 207 120 186 111 172 Z" fill="#e7c3a0" />
+  <!-- пишна сукня -->
+  <path d="M83 160 C88 154 94 152 100 152 C106 152 112 154 117 160 C125 178 132 212 140 264 C118 278 82 278 60 264 C68 212 75 178 83 160 Z" fill="url(#g)" />
+  <path d="M68 234 Q100 250 132 234" fill="none" stroke="#5c6842" stroke-width="3" opacity=".55" />
+  <path d="M100 156 C99 200 98 240 97 262" fill="none" stroke="#aab488" stroke-width="1.4" opacity=".5" />
+  <!-- ноги -->
+  <path d="M91 268 L89 316 L97 316 L98 268 Z" fill="#e7c3a0" />
+  <path d="M109 268 L111 316 L103 316 L102 268 Z" fill="#e7c3a0" />
+  <!-- шкарпетки -->
+  <rect x="88" y="302" width="10" height="14" rx="2" fill="#fdfaf3" />
+  <rect x="102" y="302" width="10" height="14" rx="2" fill="#fdfaf3" />
+  <!-- туфельки -->
+  <path d="M85 316 L98 316 L100 324 L82 325 Z" fill="#8a5a72" />
+  <path d="M115 316 L102 316 L100 324 L118 325 Z" fill="#8a5a72" />
+</svg>

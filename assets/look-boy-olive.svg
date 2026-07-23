@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Дитячий костюм">
+  <defs>
+    <linearGradient id="v" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b9569" /><stop offset=".55" stop-color="#6d784c" /><stop offset="1" stop-color="#505a34" />
+    </linearGradient>
+  </defs>
+  <!-- волосся (з проділом) -->
+  <path d="M78 114 C78 82 92 72 100 72 C112 72 122 84 122 114 C122 122 118 126 114 124 C114 112 110 104 102 104 C106 100 100 98 96 100 C90 104 86 112 86 124 C82 126 78 122 78 114 Z" fill="#4a3a26" />
+  <!-- голова -->
+  <ellipse cx="100" cy="122" rx="22" ry="24" fill="#e6c09a" />
+  <!-- шия -->
+  <path d="M94 142 L94 154 Q100 159 106 154 L106 142 Z" fill="#e6c09a" />
+  <!-- руки (сорочка) -->
+  <path d="M82 164 C71 182 69 206 75 226 C77 232 83 231 82 225 C79 207 82 186 90 172 Z" fill="#fdfaf3" stroke="#e2d8c6" stroke-width="1" />
+  <path d="M118 164 C129 182 131 206 125 226 C123 232 117 231 118 225 C121 207 118 186 110 172 Z" fill="#fdfaf3" stroke="#e2d8c6" stroke-width="1" />
+  <!-- шорти -->
+  <path d="M84 216 L99 212 L97 266 L86 266 Z" fill="#5c6640" />
+  <path d="M116 216 L101 212 L103 266 L114 266 Z" fill="#505a34" />
+  <!-- сорочка -->
+  <path d="M84 160 C88 155 93 153 100 153 C107 153 112 155 116 160 L114 214 L100 208 L86 214 Z" fill="#fdfaf3" stroke="#e2d8c6" stroke-width="1" />
+  <!-- жилетик -->
+  <path d="M88 166 L87 212 L100 207 L113 212 L112 166 C108 162 104 163 100 170 C96 163 92 162 88 166 Z" fill="url(#v)" />
+  <!-- комір -->
+  <path d="M100 156 L94 164 L100 172 L106 164 Z" fill="#ffffff" stroke="#e2d8c6" stroke-width="1" />
+  <!-- метелик -->
+  <path d="M100 166 L91 161 L91 171 Z" fill="#3d2e20" /><path d="M100 166 L109 161 L109 171 Z" fill="#3d2e20" />
+  <rect x="97" y="163" width="6" height="7" rx="1.5" fill="#2c2016" />
+  <!-- ноги -->
+  <path d="M89 266 L88 306 L96 306 L97 266 Z" fill="#e6c09a" />
+  <path d="M111 266 L112 306 L104 306 L103 266 Z" fill="#e6c09a" />
+  <!-- шкарпетки -->
+  <rect x="87" y="292" width="10" height="14" rx="2" fill="#fdfaf3" />
+  <rect x="103" y="292" width="10" height="14" rx="2" fill="#fdfaf3" />
+  <!-- туфлі -->
+  <path d="M84 306 L97 306 L99 314 L81 315 Z" fill="#2a2012" />
+  <path d="M116 306 L103 306 L101 314 L119 315 Z" fill="#2a2012" />
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Сукня на запах">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4c4e0" /><stop offset=".5" stop-color="#e8a7cf" /><stop offset="1" stop-color="#cf82b2" />
+    </linearGradient>
+  </defs>
+  <path d="M74 48 C70 18 92 6 100 6 C108 6 130 18 126 48 C132 78 128 108 120 132 C118 112 112 104 110 100 C106 106 100 108 100 108 C100 108 94 106 90 100 C88 104 82 112 80 132 C72 108 68 78 74 48 Z" fill="#7a5a3c" />
+  <path d="M93 64 L93 80 Q100 86 107 80 L107 64 Z" fill="#e7c3a0" />
+  <path d="M93 77 Q100 83 107 77 L107 81 Q100 87 93 81 Z" fill="#cfa47c" />
+  <ellipse cx="100" cy="48" rx="15.5" ry="18.5" fill="#e7c3a0" />
+  <path d="M100 30 C90 30 84 40 85 51 C86 41 92 35 100 35 C108 35 114 41 115 51 C116 40 110 30 100 30 Z" fill="#7a5a3c" />
+  <!-- ноги -->
+  <path d="M96 266 C94 312 92 356 91 396 L99 396 C100 352 101 312 102 268 Z" fill="#e7c3a0" />
+  <path d="M104 266 C106 312 108 356 109 396 L101 396 C100 352 99 312 98 268 Z" fill="#e0b892" />
+  <path d="M86 396 L99 396 L100 406 L83 408 Z" fill="#8a5a72" />
+  <path d="M114 396 L101 396 L100 406 L117 408 Z" fill="#8a5a72" />
+  <!-- руки -->
+  <path d="M86 92 C71 118 69 150 78 178 C81 185 88 184 87 177 C83 151 85 120 96 100 Z" fill="#e7c3a0" />
+  <path d="M114 92 C129 118 131 150 122 178 C119 185 112 184 113 177 C117 151 115 120 104 100 Z" fill="#e7c3a0" />
+  <!-- сукня на запах -->
+  <path d="M84 90 C81 122 84 156 90 184 C82 214 74 244 70 272 L130 272 C126 244 118 214 110 184 C116 156 119 122 116 90 C108 100 92 100 84 90 Z" fill="url(#g)" />
+  <!-- лінії запаху -->
+  <path d="M100 100 L84 150 M100 100 L116 150" fill="none" stroke="#cf82b2" stroke-width="1.6" opacity=".55" />
+  <path d="M100 148 L74 262 M100 148 L126 262" fill="none" stroke="#f8d4ea" stroke-width="1.6" opacity=".6" />
+  <!-- вузол на талії -->
+  <path d="M100 150 q-6 4 -10 12 M100 150 q6 4 10 12" fill="none" stroke="#cf82b2" stroke-width="3" stroke-linecap="round" />
+  <path d="M89 76 L92 93 M111 76 L108 93" stroke="#e8a7cf" stroke-width="5" stroke-linecap="round" />
+</svg>

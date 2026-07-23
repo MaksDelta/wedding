@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Кольорова сорочка зі штанами">
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa47c" /><stop offset=".55" stop-color="#7d885f" /><stop offset="1" stop-color="#606b45" />
+    </linearGradient>
+  </defs>
+  <path d="M84 42 C86 22 98 18 100 18 C102 18 114 22 116 42 C118 51 116 57 112 59 C112 48 108 40 100 40 C92 40 88 48 88 59 C84 57 82 51 84 42 Z" fill="#4a3a26" />
+  <ellipse cx="100" cy="48" rx="15" ry="18" fill="#e6c09a" />
+  <path d="M93 64 L93 82 Q100 88 107 82 L107 64 Z" fill="#e6c09a" />
+  <path d="M93 79 Q100 85 107 79 L107 83 Q100 89 93 83 Z" fill="#cc9f76" />
+  <!-- рукави (підкочені) -->
+  <path d="M74 102 C64 138 64 172 70 198 C73 205 81 203 79 196 C74 172 77 140 86 116 Z" fill="url(#s)" />
+  <path d="M126 102 C136 138 136 172 130 198 C127 205 119 203 121 196 C126 172 123 140 114 116 Z" fill="url(#s)" />
+  <path d="M69 196 L81 200 M119 200 L131 196" stroke="#e6c09a" stroke-width="7" stroke-linecap="round" />
+  <!-- штани -->
+  <path d="M80 246 L99 240 L97 406 L83 406 Z" fill="#3d3226" />
+  <path d="M120 246 L101 240 L103 406 L117 406 Z" fill="#332a20" />
+  <!-- сорочка -->
+  <path d="M78 100 C82 96 90 93 100 93 C110 93 118 96 122 100 L119 248 L100 242 L81 248 Z" fill="url(#s)" />
+  <!-- відкритий комір -->
+  <path d="M100 96 L90 106 L98 126 L100 120 Z" fill="#6a744e" />
+  <path d="M100 96 L110 106 L102 126 L100 120 Z" fill="#8b9569" />
+  <path d="M100 100 L96 130 L100 138 L104 130 Z" fill="#e6c09a" />
+  <!-- ґудзики -->
+  <circle cx="100" cy="150" r="2" fill="#4c5636" /><circle cx="100" cy="176" r="2" fill="#4c5636" />
+  <circle cx="100" cy="202" r="2" fill="#4c5636" /><circle cx="100" cy="228" r="2" fill="#4c5636" />
+  <!-- ремінь -->
+  <path d="M82 242 L118 242" stroke="#2a2218" stroke-width="6" />
+  <rect x="96" y="238" width="8" height="8" rx="1" fill="#7a6a48" />
+  <!-- туфлі -->
+  <path d="M82 406 L98 406 L100 415 L78 417 Z" fill="#26201a" />
+  <path d="M118 406 L102 406 L100 415 L122 417 Z" fill="#26201a" />
+</svg>

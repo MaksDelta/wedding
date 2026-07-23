@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Місце для фото 6">
+  <rect width="600" height="800" fill="#ece3d4"/>
+  <circle cx="300" cy="330" r="70" fill="none" stroke="#c9b59b" stroke-width="3"/>
+  <path d="M270 330a30 30 0 0 1 60 0M300 300v60" stroke="#b9a58c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="300" y="470" font-family="Georgia, serif" font-size="34" fill="#7d885f" text-anchor="middle">Фото 6</text>
+  <text x="300" y="510" font-family="Arial, sans-serif" font-size="16" fill="#9a8b78" text-anchor="middle" letter-spacing="2">замініть на своє</text>
+</svg>

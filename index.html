@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тетяна &amp; Максим — Запрошення на весілля</title>
+  <meta name="description" content="Запрошуємо вас на наше весілля" />
+
+  <!-- Соцмережі (превʼю при поширенні посилання) -->
+  <meta property="og:title" content="Тетяна &amp; Максим — Запрошення на весілля" />
+  <meta property="og:description" content="Запрошуємо вас розділити з нами цей особливий день" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ ПРЕЛОАДЕР-КОНВЕРТ ═══════════════ -->
+  <div class="intro" id="intro" role="button" tabindex="0" aria-label="Відкрити запрошення">
+    <!-- частини конверта, що розчиняються -->
+    <div class="intro__base">
+      <div class="intro__flap intro__flap--l"></div>
+      <div class="intro__flap intro__flap--r"></div>
+      <div class="intro__flap intro__flap--b"></div>
+      <svg class="intro__seams" viewBox="0 0 100 160" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="0" y1="0" x2="50" y2="80" /><line x1="100" y1="0" x2="50" y2="80" />
+        <line x1="0" y1="160" x2="50" y2="80" /><line x1="100" y1="160" x2="50" y2="80" />
+      </svg>
+    </div>
+    <!-- верхній клапан + печатка — злітають разом -->
+    <div class="intro__lid" id="intro-lid">
+      <div class="intro__flap intro__flap--t"></div>
+      <button class="intro__seal" id="intro-seal" aria-label="Відкрити">
+        <svg class="intro__seal-wax" viewBox="0 0 200 214" aria-hidden="true">
+          <defs>
+            <radialGradient id="wax" cx="38%" cy="30%" r="78%">
+              <stop offset="0%" stop-color="#6d4c35" />
+              <stop offset="45%" stop-color="#49331f" />
+              <stop offset="100%" stop-color="#241610" />
+            </radialGradient>
+          </defs>
+          <path d="M96,28 C124,26 150,34 160,58 C171,78 175,98 171,113 C167,135 152,143 151,161 C150,178 162,196 149,205 C140,211 129,205 127,192 C124,173 111,181 99,181 C85,181 72,172 59,159 C38,143 24,124 27,100 C30,76 40,56 52,42 C63,30 79,26 96,28 Z" fill="url(#wax)" />
+          <circle cx="100" cy="102" r="50" fill="none" stroke="rgba(255,232,205,.18)" stroke-width="1.5" />
+          <ellipse cx="80" cy="70" rx="23" ry="13" fill="rgba(255,240,220,.10)" />
+        </svg>
+        <span class="intro__seal-text">Відкрити</span>
+      </button>
+    </div>
+    <!-- монограма вгорі (над клапаном, плавно зникає) -->
+    <div class="intro__mono">
+      <span class="intro__mono-l">Т</span>
+      <span class="intro__mono-div"></span>
+      <span class="intro__mono-r">М</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ НАВІГАЦІЯ ═══════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__brand">Т &amp; М</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#story">Історія</a></li>
+      <li><a href="#countdown">Відлік</a></li>
+      <li><a href="#schedule">Розклад</a></li>
+      <li><a href="#location">Локація</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#dresscode">Дрес-код</a></li>
+      <li><a href="#rsvp" class="nav__cta">Підтвердити</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__inner">
+      <p class="hero__pre reveal" data-once>Ми одружуємось</p>
+      <h1 class="hero__names">
+        <span class="reveal" style="--d:.1s" data-once>Тетяна</span>
+        <span class="hero__amp reveal" style="--d:.25s" data-once>&amp;</span>
+        <span class="reveal" style="--d:.4s" data-once>Максим</span>
+      </h1>
+      <p class="hero__date reveal" style="--d:.55s" data-once>19 · 09 · 2026 &nbsp;·&nbsp; Чернівці</p>
+      <a href="#rsvp" class="btn hero__btn reveal" style="--d:.7s" data-once>Підтвердити присутність</a>
+    </div>
+    <a href="#story" class="hero__scroll" aria-label="Гортати вниз">
+      <span></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ═══════════════ ІСТОРІЯ ═══════════════ -->
+    <section class="section story" id="story">
+      <div class="section__deco" style="width:min(40vw,310px); left:3%; bottom:7%;">
+        <svg class="deco-couple" viewBox="0 0 96 66" aria-hidden="true">
+          <g class="fig-l" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="30" cy="15" r="5.5" /><path d="M30 21 L23 47 L37 47 Z" /><path d="M27 47 L26 58 M33 47 L34 58" />
+          </g>
+          <g class="fig-r" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="66" cy="15" r="5.5" /><path d="M66 21 v17" /><path d="M66 26 l-7 7 M66 26 l7 7" /><path d="M66 38 l-5 20 M66 38 l5 20" />
+          </g>
+          <path class="heart" d="M48 30 c-2.6 -3.6 -8.2 -1.5 -8.2 2.6 c0 3.6 4.6 6.2 8.2 8.8 c3.6 -2.6 8.2 -5.2 8.2 -8.8 c0 -4.1 -5.6 -6.2 -8.2 -2.6z" fill="#e8a7cf" stroke="none" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Наша історія</p>
+      <h2 class="section__title reveal">З чого все почалось</h2>
+      <div class="story__text reveal">
+        <!-- ✏️ ЗАМІНІТЬ текст історії -->
+        <p>Тут буде коротка історія нашого знайомства — де ми зустрілись, що нас звело разом, і як ми вирішили провести решту життя пліч-о-пліч.</p>
+        <p>Ми будемо щиро раді розділити цей день саме з вами.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ВІДЛІК ═══════════════ -->
+    <section class="section countdown" id="countdown">
+      <div class="section__deco" style="width:min(30vw,220px); right:5%; top:13%;">
+        <svg class="deco-clock" viewBox="0 0 64 66" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="32" cy="36" r="17" />
+          <path d="M32 19 v-4 M27 15 h10" />
+          <line class="h-hour" x1="32" y1="36" x2="32" y2="27" />
+          <line class="h-min" x1="32" y1="36" x2="43" y2="36" />
+          <circle cx="32" cy="36" r="1.6" fill="currentColor" stroke="none" />
+        </svg>
+      </div>
+      <p class="section__label reveal">До зустрічі залишилось</p>
+      <div class="countdown__grid reveal" id="countdown-grid">
+        <div class="countdown__cell"><span class="countdown__num" id="cd-days">00</span><span class="countdown__unit">днів</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-hours">00</span><span class="countdown__unit">годин</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-mins">00</span><span class="countdown__unit">хвилин</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-secs">00</span><span class="countdown__unit">секунд</span></div>
+      </div>
+      <p class="countdown__done" id="countdown-done" hidden>Цей день настав! 🤍</p>
+    </section>
+
+    <!-- ═══════════════ РОЗКЛАД ДНЯ ═══════════════ -->
+    <section class="section schedule" id="schedule">
+      <div class="section__deco" style="width:min(34vw,260px); left:3%; top:15%;">
+        <svg class="deco-rings" viewBox="0 0 74 60" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+          <circle cx="28" cy="36" r="13" />
+          <circle cx="46" cy="36" r="13" />
+          <path class="spark" d="M56 10 v10 M51 15 h10" stroke-width="2.2" stroke-linecap="round" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Розклад дня</p>
+      <h2 class="section__title reveal">Як пройде свято</h2>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <span class="timeline__time">14:00</span>
+          <div class="timeline__body"><h3>Вінчання</h3><p>Найважливіший момент дня</p></div>
+          <span class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="15" cy="19" r="8" /><circle cx="26" cy="19" r="8" /><path d="M18 7 l2 -3 l2 3" /></svg>
+          </span>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__time">16:00</span>
+          <div class="timeline__body"><h3>Святковий бенкет</h3><p>Вечеря, тости й привітання</p></div>
+          <span class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <g transform="rotate(-13 15 18)"><path d="M10 6 h10 l-2 8 a3 3 0 0 1 -6 0 z" /><path d="M15 14 v11 M11 25 h8" /></g>
+              <g transform="rotate(13 25 18)"><path d="M20 6 h10 l-2 8 a3 3 0 0 1 -6 0 z" /><path d="M25 14 v11 M21 25 h8" /></g>
+            </svg>
+          </span>
+        </div>
+        <div class="timeline__item reveal">
+          <span class="timeline__time">20:00</span>
+          <div class="timeline__body"><h3>Різання торту</h3><p>Солодкий фінал вечора</p></div>
+          <span class="timeline__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 38" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 34 h30" />
+              <path d="M9 33 v-10 h22 v10" />
+              <path d="M14 23 v-8 h12 v8" />
+              <path d="M9 26 q5.5 3.2 11 0 t11 0" />
+              <path d="M20 15 v-3" />
+              <path d="M20 5 c-1.6 -2 -4.6 -.7 -4.6 1.7 c0 2.1 2.6 3.5 4.6 4.9 c2 -1.4 4.6 -2.8 4.6 -4.9 c0 -2.4 -3 -3.7 -4.6 -1.7z" fill="#e8a7cf" stroke="none" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ЛОКАЦІЯ ═══════════════ -->
+    <section class="section location" id="location">
+      <div class="section__deco" style="width:min(22vw,170px); right:4%; top:9%;">
+        <svg class="deco-pin" viewBox="0 0 48 62" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true">
+          <path d="M24 6 C14 6 7 13 7 23 C7 35 24 52 24 52 C24 52 41 35 41 23 C41 13 34 6 24 6 Z" />
+          <circle cx="24" cy="23" r="6" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Де це відбудеться</p>
+      <h2 class="section__title reveal">Локація</h2>
+      <!-- ✏️ за потреби уточніть точну адресу ресторану -->
+      <p class="location__name reveal">Ресторан «Брізоль»</p>
+      <p class="location__addr reveal">м. Чернівці</p>
+      <div class="location__map reveal">
+        <iframe
+          title="Карта до місця події"
+          src="https://www.google.com/maps?q=Брізоль+Чернівці&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a class="btn btn--ghost reveal" href="https://maps.google.com/?q=Брізоль+Чернівці" target="_blank" rel="noopener">Прокласти маршрут</a>
+    </section>
+
+    <!-- ═══════════════ ГАЛЕРЕЯ ═══════════════ -->
+    <section class="section gallery" id="gallery">
+      <div class="section__deco" style="width:min(22vw,150px); right:5%; top:7%;">
+        <svg class="deco-cam" viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="10" y="18" width="44" height="30" rx="5" />
+          <path d="M22 18 l4 -6 h12 l4 6" />
+          <circle cx="32" cy="33" r="9" />
+          <circle cx="46" cy="26" r="1.6" fill="currentColor" stroke="none" />
+          <rect class="flash" x="11" y="19" width="42" height="28" rx="4" fill="#fff6fb" stroke="none" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Наші миті</p>
+      <h2 class="section__title reveal">Галерея</h2>
+      <!-- ✏️ ЗАМІНІТЬ фото: покладіть свої у папку assets/ та змініть src -->
+      <div class="gallery-float">
+        <figure class="float-item f-l" style="top:3%;  --h:150px; --dur:36s; --delay:-6s;"><img src="assets/photo-1.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:23%; --h:205px; --dur:50s; --delay:-22s;"><img src="assets/photo-2.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-l" style="top:50%; --h:170px; --dur:41s; --delay:-12s;"><img src="assets/photo-3.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:68%; --h:140px; --dur:54s; --delay:-33s;"><img src="assets/photo-4.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:11%; --h:190px; --dur:45s; --delay:-15s;"><img src="assets/photo-5.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-l" style="top:36%; --h:234px; --dur:58s; --delay:-27s;"><img src="assets/photo-6.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:60%; --h:158px; --dur:34s; --delay:-8s;"><img src="assets/photo-2.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-l" style="top:4%;  --h:180px; --dur:49s; --delay:-40s;"><img src="assets/photo-3.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:46%; --h:150px; --dur:39s; --delay:-18s;"><img src="assets/photo-1.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-l" style="top:70%; --h:146px; --dur:43s; --delay:-5s;"><img src="assets/photo-5.svg" alt="Фото пари" loading="lazy" /></figure>
+        <figure class="float-item f-r" style="top:28%; --h:176px; --dur:52s; --delay:-31s;"><img src="assets/photo-6.svg" alt="Фото пари" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ДРЕС-КОД ═══════════════ -->
+    <section class="section dresscode" id="dresscode">
+      <div class="section__deco" style="width:min(26vw,200px); right:4%; top:12%;">
+        <svg class="deco-hanger" viewBox="0 0 64 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M32 10 a4 4 0 0 1 4 4 c0 3 -4 3 -4 6" />
+          <path d="M32 20 L12 37 H52 Z" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Дрес-код</p>
+      <h2 class="section__title reveal">Кольори свята</h2>
+      <p class="dresscode__text reveal">Ми будемо щиро вдячні, якщо ваше вбрання перегукуватиметься з палітрою нашого свята. Кілька ідей для натхнення:</p>
+      <div class="carousel reveal" id="looks-carousel">
+        <button class="carousel__nav carousel__nav--prev" id="looks-prev" aria-label="Попередній образ">&#8249;</button>
+        <div class="carousel__track" id="looks-track">
+          <figure class="look" style="--lb:#e6ebdb"><img src="assets/look-gown-sage.svg" alt="Довга вечірня сукня" loading="lazy" /><figcaption>Довга сукня</figcaption></figure>
+          <figure class="look" style="--lb:#ece1d3"><img src="assets/look-suit-choco.svg" alt="Класичний костюм" loading="lazy" /><figcaption>Класичний костюм</figcaption></figure>
+          <figure class="look" style="--lb:#e6ebdb"><img src="assets/look-girl-sage.svg" alt="Сукня для дівчинки" loading="lazy" /><figcaption>Для дівчинки</figcaption></figure>
+          <figure class="look" style="--lb:#f6e6f0"><img src="assets/look-cocktail-pink.svg" alt="Коктейльна сукня" loading="lazy" /><figcaption>Коктейльна сукня</figcaption></figure>
+          <figure class="look" style="--lb:#f1ecde"><img src="assets/look-vest-beige.svg" alt="Сорочка з жилетом" loading="lazy" /><figcaption>Сорочка з жилетом</figcaption></figure>
+          <figure class="look" style="--lb:#ece1d3"><img src="assets/look-boy-choco.svg" alt="Костюм для хлопчика" loading="lazy" /><figcaption>Для хлопчика</figcaption></figure>
+          <figure class="look" style="--lb:#ece5db"><img src="assets/look-slip-mocha.svg" alt="Атласна сукня міді" loading="lazy" /><figcaption>Сукня-комбінація</figcaption></figure>
+          <figure class="look" style="--lb:#eaded0"><img src="assets/look-suspenders-choco.svg" alt="Сорочка з підтяжками" loading="lazy" /><figcaption>Сорочка з підтяжками</figcaption></figure>
+          <figure class="look" style="--lb:#f6e6f0"><img src="assets/look-girl-pink.svg" alt="Сукня для дівчинки" loading="lazy" /><figcaption>Для дівчинки</figcaption></figure>
+          <figure class="look" style="--lb:#f4eee1"><img src="assets/look-maxi-cream.svg" alt="Легка максі-сукня" loading="lazy" /><figcaption>Легка максі</figcaption></figure>
+          <figure class="look" style="--lb:#e7ecd8"><img src="assets/look-suit-olive.svg" alt="Костюм із метеликом" loading="lazy" /><figcaption>Костюм з метеликом</figcaption></figure>
+          <figure class="look" style="--lb:#e7ecd8"><img src="assets/look-boy-olive.svg" alt="Костюм для хлопчика" loading="lazy" /><figcaption>Для хлопчика</figcaption></figure>
+        </div>
+        <button class="carousel__nav carousel__nav--next" id="looks-next" aria-label="Наступний образ">&#8250;</button>
+      </div>
+      <p class="dresscode__palette-label reveal">Палітра свята</p>
+      <div class="dresscode__swatches">
+        <figure class="swatch reveal"><span class="swatch__dot" style="--c:#7d885f"></span><figcaption>Шавлія</figcaption></figure>
+        <figure class="swatch reveal" style="--d:.08s"><span class="swatch__dot" style="--c:#3a2e24"></span><figcaption>Гіркий шоколад</figcaption></figure>
+        <figure class="swatch reveal" style="--d:.16s"><span class="swatch__dot" style="--c:#9a8b78"></span><figcaption>Мока</figcaption></figure>
+        <figure class="swatch reveal" style="--d:.24s"><span class="swatch__dot" style="--c:#e8a7cf"></span><figcaption>Пудрово-рожевий</figcaption></figure>
+        <figure class="swatch reveal" style="--d:.32s"><span class="swatch__dot" style="--c:#e6d9bf"></span><figcaption>Крем</figcaption></figure>
+      </div>
+      <p class="dresscode__note reveal">Будь ласка, уникайте білого — залишімо його нареченій 🤍</p>
+    </section>
+
+    <!-- ═══════════════ RSVP ═══════════════ -->
+    <section class="section rsvp" id="rsvp">
+      <div class="section__deco" style="width:min(34vw,260px); left:4%; bottom:6%;">
+        <svg class="deco-rsvp" viewBox="0 0 64 54" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true">
+          <rect x="10" y="18" width="44" height="30" rx="4" />
+          <path d="M10 21 L32 37 L54 21" />
+          <path class="heart" d="M32 6 c-2.5 -3.4 -7.6 -1.4 -7.6 2.5 c0 3.4 4.3 5.9 7.6 8.3 c3.3 -2.4 7.6 -4.9 7.6 -8.3 c0 -3.9 -5.1 -5.9 -7.6 -2.5z" fill="#e8a7cf" stroke="none" />
+        </svg>
+      </div>
+      <p class="section__label reveal">Підтвердження</p>
+      <h2 class="section__title reveal">Чи будете з нами?</h2>
+      <p class="rsvp__text reveal">
+        <!-- ✏️ за потреби змініть крайню дату підтвердження -->
+        Будь ласка, підтвердіть свою присутність до <strong>1 вересня 2026</strong>.
+      </p>
+      <!--
+        ✏️ RSVP-форма. Найпростіший варіант для статичного сайту:
+        1) Створіть форму на Google Forms.
+        2) Натисніть «Надіслати» → значок посилання → скопіюйте URL.
+        3) Вставте його в href нижче.
+        (Або замість кнопки можна вбудувати <iframe> форми — див. README.)
+      -->
+      <a class="btn reveal" href="https://forms.gle/ВАШЕ-ПОСИЛАННЯ" target="_blank" rel="noopener">Заповнити форму</a>
+      <p class="rsvp__contact reveal">Питання? Телефонуйте: <a href="tel:+380000000000">+380 00 000 00 00</a></p>
+    </section>
+  </main>
+
+  <!-- ═══════════════ ФУТЕР ═══════════════ -->
+  <footer class="footer">
+    <p class="footer__names">Тетяна &amp; Максим</p>
+    <p class="footer__date">19 вересня 2026</p>
+    <p class="footer__heart">З любов'ю 🤍</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

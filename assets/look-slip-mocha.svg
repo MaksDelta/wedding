@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 440" role="img" aria-label="Атласна сукня міді">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8a893" /><stop offset=".5" stop-color="#9a8b78" /><stop offset="1" stop-color="#786a58" />
+    </linearGradient>
+  </defs>
+  <!-- волосся (зібране) -->
+  <path d="M80 46 C78 20 92 8 100 8 C108 8 122 20 120 46 C124 66 120 84 112 96 C114 82 110 74 108 70 C105 76 100 78 100 78 C100 78 95 76 92 70 C90 74 86 82 88 96 C80 84 76 66 80 46 Z" fill="#4a3728" />
+  <path d="M116 40 C126 44 128 58 122 66 C120 56 118 48 116 44 Z" fill="#4a3728" />
+  <!-- шия -->
+  <path d="M93 62 L93 80 Q100 86 107 80 L107 62 Z" fill="#e7c3a0" />
+  <path d="M93 77 Q100 83 107 77 L107 81 Q100 87 93 81 Z" fill="#cfa47c" />
+  <!-- голова -->
+  <ellipse cx="100" cy="46" rx="15.5" ry="18.5" fill="#e7c3a0" />
+  <path d="M100 28 C90 28 84 38 85 49 C86 39 92 33 100 33 C108 33 114 39 115 49 C116 38 110 28 100 28 Z" fill="#4a3728" />
+  <!-- руки -->
+  <path d="M87 92 C74 122 72 158 80 196 C83 203 90 202 89 195 C84 160 86 124 96 100 Z" fill="#e7c3a0" />
+  <path d="M113 92 C126 122 128 158 120 196 C117 203 110 202 111 195 C116 160 114 124 104 100 Z" fill="#e7c3a0" />
+  <!-- сукня-комбінація (пряма, до литок) -->
+  <path d="M86 92 C83 130 85 180 90 220 C86 280 84 330 84 360 L116 360 C116 330 114 280 110 220 C115 180 117 130 114 92 C108 100 92 100 86 92 Z" fill="url(#g)" />
+  <!-- атласні відблиски/складки -->
+  <path d="M96 100 C94 200 92 300 92 356" fill="none" stroke="#c9bba7" stroke-width="2" opacity=".55" />
+  <path d="M107 110 C110 210 110 300 108 356" fill="none" stroke="#6f6250" stroke-width="1.5" opacity=".5" />
+  <path d="M100 118 L100 356" fill="none" stroke="#786a58" stroke-width="1" opacity=".4" />
+  <!-- тонкі бретелі -->
+  <path d="M89 74 L91 94 M111 74 L109 94" stroke="#9a8b78" stroke-width="3.5" stroke-linecap="round" />
+  <!-- туфлі -->
+  <path d="M85 360 L95 360 L96 370 L82 372 Z" fill="#5c4a3a" />
+  <path d="M115 360 L105 360 L104 370 L118 372 Z" fill="#5c4a3a" />
+</svg>
