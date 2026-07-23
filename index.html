@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Тетяна &amp; Максим — Запрошення на весілля</title>
+  <title>Максим &amp; Тетяна — Запрошення на весілля</title>
   <meta name="description" content="Запрошуємо вас на наше весілля" />
 
   <!-- Соцмережі (превʼю при поширенні посилання) -->
@@ -51,15 +51,15 @@
     </div>
     <!-- монограма вгорі (над клапаном, плавно зникає) -->
     <div class="intro__mono">
-      <span class="intro__mono-l">Т</span>
+      <span class="intro__mono-l">М</span>
       <span class="intro__mono-div"></span>
-      <span class="intro__mono-r">М</span>
+      <span class="intro__mono-r">Т</span>
     </div>
   </div>
 
   <!-- ═══════════════ НАВІГАЦІЯ ═══════════════ -->
   <nav class="nav" id="nav">
-    <a href="#hero" class="nav__brand">Т &amp; М</a>
+    <a href="#hero" class="nav__brand">М &amp; T</a>
     <button class="nav__toggle" id="navToggle" aria-label="Меню">
       <span></span><span></span><span></span>
     </button>
@@ -80,12 +80,12 @@
     <div class="hero__inner">
       <p class="hero__pre reveal" data-once>Ми одружуємось</p>
       <h1 class="hero__names">
-        <span class="reveal" style="--d:.1s" data-once>Тетяна</span>
-        <span class="hero__amp reveal" style="--d:.25s" data-once>&amp;</span>
         <span class="reveal" style="--d:.4s" data-once>Максим</span>
+        <span class="hero__amp reveal" style="--d:.25s" data-once>&amp;</span>
+        <span class="reveal" style="--d:.1s" data-once>Тетяна</span>
+
       </h1>
       <p class="hero__date reveal" style="--d:.55s" data-once>19 · 09 · 2026 &nbsp;·&nbsp; Чернівці</p>
-      <a href="#rsvp" class="btn hero__btn reveal" style="--d:.7s" data-once>Підтвердити присутність</a>
     </div>
     <a href="#story" class="hero__scroll" aria-label="Гортати вниз">
       <span></span>
@@ -93,28 +93,6 @@
   </header>
 
   <main>
-    <!-- ═══════════════ ІСТОРІЯ ═══════════════ -->
-    <section class="section story" id="story">
-      <div class="section__deco" style="width:min(40vw,310px); left:3%; bottom:7%;">
-        <svg class="deco-couple" viewBox="0 0 96 66" aria-hidden="true">
-          <g class="fig-l" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="30" cy="15" r="5.5" /><path d="M30 21 L23 47 L37 47 Z" /><path d="M27 47 L26 58 M33 47 L34 58" />
-          </g>
-          <g class="fig-r" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="66" cy="15" r="5.5" /><path d="M66 21 v17" /><path d="M66 26 l-7 7 M66 26 l7 7" /><path d="M66 38 l-5 20 M66 38 l5 20" />
-          </g>
-          <path class="heart" d="M48 30 c-2.6 -3.6 -8.2 -1.5 -8.2 2.6 c0 3.6 4.6 6.2 8.2 8.8 c3.6 -2.6 8.2 -5.2 8.2 -8.8 c0 -4.1 -5.6 -6.2 -8.2 -2.6z" fill="#e8a7cf" stroke="none" />
-        </svg>
-      </div>
-      <p class="section__label reveal">Наша історія</p>
-      <h2 class="section__title reveal">З чого все почалось</h2>
-      <div class="story__text reveal">
-        <!-- ✏️ ЗАМІНІТЬ текст історії -->
-        <p>Тут буде коротка історія нашого знайомства — де ми зустрілись, що нас звело разом, і як ми вирішили провести решту життя пліч-о-пліч.</p>
-        <p>Ми будемо щиро раді розділити цей день саме з вами.</p>
-      </div>
-    </section>
-
     <!-- ═══════════════ ВІДЛІК ═══════════════ -->
     <section class="section countdown" id="countdown">
       <div class="section__deco" style="width:min(30vw,220px); right:5%; top:13%;">
@@ -205,35 +183,6 @@
       <a class="btn btn--ghost reveal" href="https://maps.google.com/?q=Брізоль+Чернівці" target="_blank" rel="noopener">Прокласти маршрут</a>
     </section>
 
-    <!-- ═══════════════ ГАЛЕРЕЯ ═══════════════ -->
-    <section class="section gallery" id="gallery">
-      <div class="section__deco" style="width:min(22vw,150px); right:5%; top:7%;">
-        <svg class="deco-cam" viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true">
-          <rect x="10" y="18" width="44" height="30" rx="5" />
-          <path d="M22 18 l4 -6 h12 l4 6" />
-          <circle cx="32" cy="33" r="9" />
-          <circle cx="46" cy="26" r="1.6" fill="currentColor" stroke="none" />
-          <rect class="flash" x="11" y="19" width="42" height="28" rx="4" fill="#fff6fb" stroke="none" />
-        </svg>
-      </div>
-      <p class="section__label reveal">Наші миті</p>
-      <h2 class="section__title reveal">Галерея</h2>
-      <!-- ✏️ ЗАМІНІТЬ фото: покладіть свої у папку assets/ та змініть src -->
-      <div class="gallery-float">
-        <figure class="float-item f-l" style="top:3%;  --h:150px; --dur:36s; --delay:-6s;"><img src="assets/photo-1.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:23%; --h:205px; --dur:50s; --delay:-22s;"><img src="assets/photo-2.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-l" style="top:50%; --h:170px; --dur:41s; --delay:-12s;"><img src="assets/photo-3.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:68%; --h:140px; --dur:54s; --delay:-33s;"><img src="assets/photo-4.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:11%; --h:190px; --dur:45s; --delay:-15s;"><img src="assets/photo-5.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-l" style="top:36%; --h:234px; --dur:58s; --delay:-27s;"><img src="assets/photo-6.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:60%; --h:158px; --dur:34s; --delay:-8s;"><img src="assets/photo-2.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-l" style="top:4%;  --h:180px; --dur:49s; --delay:-40s;"><img src="assets/photo-3.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:46%; --h:150px; --dur:39s; --delay:-18s;"><img src="assets/photo-1.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-l" style="top:70%; --h:146px; --dur:43s; --delay:-5s;"><img src="assets/photo-5.svg" alt="Фото пари" loading="lazy" /></figure>
-        <figure class="float-item f-r" style="top:28%; --h:176px; --dur:52s; --delay:-31s;"><img src="assets/photo-6.svg" alt="Фото пари" loading="lazy" /></figure>
-      </div>
-    </section>
-
     <!-- ═══════════════ ДРЕС-КОД ═══════════════ -->
     <section class="section dresscode" id="dresscode">
       <div class="section__deco" style="width:min(26vw,200px); right:4%; top:12%;">
@@ -296,7 +245,7 @@
         3) Вставте його в href нижче.
         (Або замість кнопки можна вбудувати <iframe> форми — див. README.)
       -->
-      <a class="btn reveal" href="https://forms.gle/ВАШЕ-ПОСИЛАННЯ" target="_blank" rel="noopener">Заповнити форму</a>
+      <a class="btn reveal" href="https://forms.gle/ВАШЕ-ПОСИЛАННЯ" target="_blank" rel="noopener">Підтвердити присутність</a>
       <p class="rsvp__contact reveal">Питання? Телефонуйте: <a href="tel:+380000000000">+380 00 000 00 00</a></p>
     </section>
   </main>
