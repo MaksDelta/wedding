@@ -207,9 +207,11 @@ a { color: inherit; text-decoration: none; }
 
 .hero__inner { position: relative; z-index: 1; padding: 0 20px; }
 .hero__pre {
-  text-transform: uppercase; letter-spacing: .42em; font-size: .8rem;
-  color: var(--accent-dk); font-weight: 500; margin-bottom: 20px;
-  text-shadow: 0 1px 10px rgba(250,248,245,.9), 0 1px 3px rgba(250,248,245,.9);
+  text-transform: uppercase; letter-spacing: .42em; font-size: .82rem;
+  font-weight: 400; margin-bottom: 20px;
+  color: transparent;                             /* всередині — прозоро */
+  -webkit-text-stroke: .8px var(--accent);
+  paint-order: stroke fill;
 }
 .hero__names {
   font-family: var(--serif); font-weight: 500;
