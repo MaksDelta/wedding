@@ -382,3 +382,131 @@ function initReveal() {
     }, 200);
   }
 })();
+
+/* ═══════════════ ДЕКОР: фігурки, що сходяться при скролі ═══════════════ */
+(function coupleWalk() {
+  const wrap = document.getElementById('couplewalk');
+  if (!wrap) return;
+  const l = wrap.querySelector('.couplewalk__f--l');
+  const r = wrap.querySelector('.couplewalk__f--r');
+  const heart = wrap.querySelector('.couplewalk__heart');
+  const footer = document.querySelector('.footer');
+
+  const gArm = wrap.querySelector('.couplewalk__f--l .cw-throw');
+  const bArm = wrap.querySelector('.cw-barm');   // одна рухома рука нареченої
+  const love = wrap.querySelector('.cw-love');
+  const msg = wrap.querySelector('.cw-msg');
+  const dress = wrap.querySelector('.cw-dress');
+  const suit = wrap.querySelector('.cw-suit');
+
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const clamp01 = (t) => Math.max(0, Math.min(1, t));
+  const setArm = (el, deg) => { if (el) el.style.transform = 'rotate(' + deg + 'deg)'; };
+  // піднята рука нареченої (bo — наскільки піднята); опущена рука зникає, щоб не було «третьої»
+  const setBArm = (deg) => { if (bArm) bArm.style.transform = 'rotate(' + deg + 'deg)'; };
+  const DRESS = ['#cbb488', '#e8a7cf', '#7d885f', '#9a8b78', '#c98f6a'];
+  const SUIT  = ['#7d885f', '#4a3b2e', '#6d784c', '#8a7a58', '#3a4634'];
+  let jumpL = 0, jumpR = 0;   // вертикальні стрибки фігурок
+
+  // кеш позицій секцій
+  const ids = ['countdown', 'schedule', 'location', 'dresscode', 'rsvp'];
+  let secs = [];
+  const measureSecs = () => {
+    secs = ids.map((id) => {
+      const el = document.getElementById(id);
+      if (!el) return null;
+      return { id, top: el.getBoundingClientRect().top + window.scrollY, h: el.offsetHeight };
+    }).filter(Boolean);
+  };
+
+  const resetParts = () => {
+    setArm(gArm, 0);
+    setBArm(0);
+    jumpL = 0; jumpR = 0;
+    if (love) love.style.opacity = 0;
+    if (msg) msg.style.opacity = 0;
+    if (dress) dress.style.fill = '#cbb488';
+    if (suit) suit.style.fill = '#7d885f';
+  };
+
+  // усе залежить від локального прогресу секції p (0..1)
+  const scene = (id, p) => {
+    const b = Math.sin(Math.PI * p);   // 0 на краях, 1 посередині
+    if (id === 'countdown') {
+      let ga = 0;
+      if (p < 0.35) { const q = p / 0.35; ga = q < 0.5 ? lerp(0, -120, q / 0.5) : lerp(-120, -20, (q - 0.5) / 0.5); }
+      setArm(gArm, ga);
+      if (p > 0.18 && p < 0.72) {
+        const q = (p - 0.18) / 0.54;
+        msg.style.opacity = q < 0.15 ? q / 0.15 : (q > 0.85 ? (1 - q) / 0.15 : 1);
+        const x = lerp(-44, 44, q), y = -4 - Math.sin(q * Math.PI) * 16;
+        msg.style.transform = 'translateX(' + x + 'vw) translateY(' + y + 'px) scale(' + (0.7 + 0.3 * Math.sin(q * Math.PI)) + ')';
+      }
+      if (p > 0.5) {
+        const q = (p - 0.5) / 0.5;
+        const raise = Math.sin(q * Math.PI);              // плавно піднімає й опускає
+        setBArm(raise * (150 + Math.sin(q * Math.PI * 6) * 22));   // махає (вгору-трохи-ліворуч)
+      }
+    } else if (id === 'schedule') {           // обидва підстрибують
+      jumpL = -Math.abs(Math.sin(p * Math.PI * 3)) * 11;
+      jumpR = -Math.abs(Math.sin(p * Math.PI * 3 + 0.7)) * 11;
+      setArm(gArm, -22 * b);
+      setBArm(18 * b);
+    } else if (id === 'location') {           // обоє показують «нам туди»
+      setArm(gArm, -80 * b);
+      setBArm(80 * b);
+    } else if (id === 'dresscode') {          // наречена міняє сукню, наречений — костюм; він плескає
+      dress.style.fill = DRESS[Math.min(DRESS.length - 1, Math.floor(p * DRESS.length))];
+      if (suit) suit.style.fill = SUIT[Math.min(SUIT.length - 1, Math.floor(((p + 0.35) % 1) * SUIT.length))];
+      setArm(gArm, b * (-40 + Math.sin(p * Math.PI * 6) * 16));   // плескання (0 на краях)
+    } else if (id === 'rsvp') {               // наречена шле повітряний поцілунок, наречений «ловить»
+      setBArm(150 * b);
+      const lq = clamp01((p - 0.25) / 0.75);
+      love.style.opacity = Math.sin(lq * Math.PI);
+      love.style.transform = 'translate(' + (-32 * lq) + 'px,' + (-26 * lq) + 'px) scale(' + (0.4 + lq) + ')';
+      setArm(gArm, -100 * b);
+    }
+  };
+
+  let ticking = false, runT = null;
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const prog = max > 0 ? clamp01(window.scrollY / max) : 0;
+    const GAP = window.innerWidth / 2 - 26;
+    const offL = -(1 - prog) * GAP;
+    const offR = (1 - prog) * GAP; // синхронне (дзеркальне) зближення
+    heart.style.opacity = prog > 0.9 ? (prog - 0.9) / 0.1 : 0;
+    wrap.classList.toggle('is-met', prog > 0.985);
+
+    let bottom = 18;
+    if (footer) { const ft = footer.getBoundingClientRect().top; bottom = Math.max(bottom, window.innerHeight - ft + 14); }
+    wrap.style.bottom = bottom + 'px';
+
+    // скрабінг жестів по активній секції (усе від скролу); під час поцілунку — руки спокійні
+    resetParts();
+    if (prog <= 0.985) {
+      const center = window.scrollY + window.innerHeight / 2;
+      for (const s of secs) {
+        if (center >= s.top && center <= s.top + s.h) { scene(s.id, clamp01((center - s.top) / s.h)); break; }
+      }
+    }
+
+    // зближення + стрибки
+    l.style.transform = 'translateX(' + offL + 'px) translateY(' + jumpL + 'px)';
+    r.style.transform = 'translateX(' + offR + 'px) translateY(' + jumpR + 'px)';
+    ticking = false;
+  };
+  const onScroll = () => {
+    wrap.classList.add('is-running');
+    if (runT) clearTimeout(runT);
+    runT = setTimeout(() => wrap.classList.remove('is-running'), 150);
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { measureSecs(); update(); });
+  window.addEventListener('load', () => { measureSecs(); update(); });
+  setTimeout(() => { measureSecs(); update(); }, 700);
+  setTimeout(() => { measureSecs(); update(); }, 1800);
+  measureSecs();
+  update();
+})();
