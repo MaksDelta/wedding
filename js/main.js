@@ -182,3 +182,57 @@ function initReveal() {
 
   document.addEventListener('visibilitychange', () => { if (!document.hidden) last = 0; });
 })();
+
+/* ═══════════════ RSVP-ФОРМА (Google Apps Script) ═══════════════ */
+(function rsvp() {
+  const form = document.getElementById('rsvp-form');
+  if (!form) return;
+
+  // ✏️ ВСТАВТЕ СЮДИ URL вашого веб-застосунку Apps Script:
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJ7iYc7oYgT648_ehIW5I2Z2vqJOTOjVMjrqfgGVBnMp7mDvm2qYA_tFPvBDy07dCQvQ/exec';
+
+  const statusEl = document.getElementById('rsvp-status');
+  const submitBtn = document.getElementById('rsvp-submit');
+  const nameInput = form.elements['name'];
+  const choiceWrap = form.querySelector('.rsvp-choice');
+
+  const setStatus = (msg, type) => {
+    statusEl.textContent = msg;
+    statusEl.classList.remove('is-ok', 'is-err');
+    if (type) statusEl.classList.add(type === 'ok' ? 'is-ok' : 'is-err');
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const attending = form.querySelector('input[name="attending"]:checked');
+    let ok = true;
+    nameInput.classList.toggle('is-invalid', !name); if (!name) ok = false;
+    choiceWrap.classList.toggle('is-invalid', !attending); if (!attending) ok = false;
+    if (!ok) { setStatus('Будь ласка, вкажіть імʼя та оберіть відповідь.', 'err'); return; }
+
+    if (SCRIPT_URL.startsWith('ВАШ')) {
+      setStatus('Форму ще не підключено (додайте URL Apps Script).', 'err');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Надсилаємо…';
+    setStatus('', '');
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form)),
+      });
+      form.reset();
+      setStatus('Дякуємо! Вашу відповідь надіслано 🤍', 'ok');
+      submitBtn.textContent = 'Надіслано ✓';
+    } catch (err) {
+      setStatus('Не вдалося надіслати. Спробуйте ще раз або зателефонуйте нам.', 'err');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Надіслати';
+    }
+  });
+})();

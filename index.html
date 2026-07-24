@@ -237,15 +237,34 @@
         <!-- ✏️ за потреби змініть крайню дату підтвердження -->
         Будь ласка, підтвердіть свою присутність до <strong>1 вересня 2026</strong>.
       </p>
-      <!--
-        ✏️ RSVP-форма. Найпростіший варіант для статичного сайту:
-        1) Створіть форму на Google Forms.
-        2) Натисніть «Надіслати» → значок посилання → скопіюйте URL.
-        3) Вставте його в href нижче.
-        (Або замість кнопки можна вбудувати <iframe> форми — див. README.)
-      -->
-      <a class="btn reveal" href="https://forms.gle/ВАШЕ-ПОСИЛАННЯ" target="_blank" rel="noopener">Підтвердити присутність</a>
-      <p class="rsvp__contact reveal">Питання? Телефонуйте: <a href="tel:+380000000000">+380 96 060 99 07</a></p>
+      <form class="rsvp-form reveal" id="rsvp-form" novalidate>
+        <label class="rsvp-field">
+          <span>Ім'я та прізвище</span>
+          <input type="text" name="name" autocomplete="name" required placeholder="Напр. Іван Петренко" />
+        </label>
+
+        <div class="rsvp-field">
+          <span>Чи будете з нами?</span>
+          <div class="rsvp-choice">
+            <label><input type="radio" name="attending" value="Буду" required /><span>Буду 🤍</span></label>
+            <label><input type="radio" name="attending" value="Не зможу" /><span>Не зможу</span></label>
+          </div>
+        </div>
+
+        <label class="rsvp-field">
+          <span>Кількість гостей</span>
+          <input type="number" name="guests" min="1" max="12" value="1" inputmode="numeric" />
+        </label>
+
+        <label class="rsvp-field">
+          <span>Побажання (меню, тост, побажання)</span>
+          <textarea name="message" rows="3" placeholder="За бажанням…"></textarea>
+        </label>
+
+        <button type="submit" class="btn" id="rsvp-submit">Надіслати</button>
+        <p class="rsvp-status" id="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="rsvp__contact reveal">Питання? Телефонуйте: <a href="tel:+380960609907">+380 96 060 99 07</a></p>
     </section>
   </main>
 
