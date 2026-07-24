@@ -160,6 +160,23 @@ a { color: inherit; text-decoration: none; }
 .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 6px; }
 .nav__toggle span { width: 24px; height: 2px; background: var(--ink); transition: .3s var(--ease); }
 
+/* ═══════════════ ДЕКОР: рамка-кути ═══════════════ */
+.frame { position: fixed; inset: clamp(12px, 2.2vw, 26px); z-index: 40; pointer-events: none; }
+.frame__c { position: absolute; width: 28px; height: 28px; border: 1px solid rgba(125,136,95,.4); }
+.frame__c--tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.frame__c--tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.frame__c--bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.frame__c--br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+/* ═══════════════ ДЕКОР: летючі пелюстки ═══════════════ */
+/* контейнер прив'язаний до документа й починається від низу відліку (задається в JS) */
+.particles { position: absolute; left: 0; right: 0; z-index: 44; pointer-events: none; overflow: hidden; }
+.particle {
+  position: absolute; top: 0; left: 0; opacity: 0;
+  border-radius: 100% 0 100% 0;   /* форма пелюстки */
+}
+@media (prefers-reduced-motion: reduce) { .particles { display: none; } }
+
 /* ═══════════════ HERO ═══════════════ */
 .hero {
   position: relative; min-height: 100svh;
