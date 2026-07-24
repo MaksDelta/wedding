@@ -193,7 +193,7 @@ a { color: inherit; text-decoration: none; }
 /* фото пари зліва, що плавно розчиняється праворуч (без видимого краю) */
 .hero__photo {
   position: absolute; inset: 0; z-index: 0;
-  background: url("../assets/hero-couple.jpg") center 14% / cover no-repeat;
+  background: url("../assets/hero-couple.jpg") left 42% / cover no-repeat;
   -webkit-mask-image: linear-gradient(to right, #000 0%, #000 30%, rgba(0,0,0,.35) 55%, transparent 74%);
           mask-image: linear-gradient(to right, #000 0%, #000 30%, rgba(0,0,0,.35) 55%, transparent 74%);
 }
