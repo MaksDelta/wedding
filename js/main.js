@@ -256,7 +256,9 @@ function initReveal() {
   function measure() {
     if (!countdown) return;
     top0 = countdown.getBoundingClientRect().bottom + window.scrollY - 70;
-    H = document.documentElement.scrollHeight - top0;
+    // висота — до низу футера (НЕ scrollHeight, щоб не було петлі зростання)
+    const footerBottom = footer ? (footer.getBoundingClientRect().bottom + window.scrollY) : document.documentElement.scrollHeight;
+    H = Math.max(0, footerBottom - top0);
     box.style.top = top0 + 'px';
     box.style.height = H + 'px';
     W = box.clientWidth || window.innerWidth;
